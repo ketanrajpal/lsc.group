@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link
+      href="./assets/css/default.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="login_screen">
+    <div id="container">
+      <section class="slider">
+        <div>
+          <img src="./assets/img/logo.svg" />
+        </div>
+        <div>
+          2020 &copy; LSC Group of Colleges. All rights reserved.
+        </div>
+      </section>
+      <section class="form">
+        <h1>
+          <span>Welcome to the portal of</span>
+          London School of Commerce Group of Colleges
+        </h1>
+        <form autocomplete="off" method="POST" action="dashboard.html">
+          <fieldset class="email_fieldset">
+            <label for="email">Email address</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Please enter your email address"
+            />
+          </fieldset>
+          <fieldset class="password_fieldset">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Please enter your account password"
+            />
+          </fieldset>
+          <fieldset class="remember_me_fieldset">
+            <label class="input_checkbox" for="remember_me">
+              <input type="checkbox" id="remember_me" name="remember_me" />
+              <span>Remember me on this computer</span>
+            </label>
+          </fieldset>
+          <fieldset class="submit_button">
+            <button type="submit">Login</button>
+          </fieldset>
+          <p>
+            Unable to login or forgot your password?
+            <a href="">Click here</a>.
+          </p>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

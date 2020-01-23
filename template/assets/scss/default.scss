@@ -1,0 +1,107 @@
+@import "reset";
+@import "variables";
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #ededed;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  height: 100%;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+@import "index";
+
+.dashboard {
+  div.container {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    height: 100%;
+    width: 100%;
+    section {
+      box-sizing: border-box;
+      &.navigation {
+        background-color: $primary;
+        position: sticky;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        header {
+          padding: 50px 30px;
+          text-align: center;
+          a {
+            width: 100px;
+            display: inline-block;
+            margin: auto;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        nav {
+          letter-spacing: 1px;
+          box-sizing: border-box;
+          a {
+            display: block;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-weight: 300;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            &:first-child {
+              border-top: 1px solid rgba(0, 0, 0, 0.2);
+            }
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.1);
+            }
+            div {
+              &:nth-child(1) {
+                text-align: center;
+                color: rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
+        }
+      }
+      &.content {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        header {
+          background-color: #ffffff;
+          display: grid;
+          grid-template-columns: 1fr auto;
+          padding: 7px 15px;
+          box-shadow: 0px 0px 3px #cccccc;
+          nav {
+            &.breadcrumb {
+              a {
+                div {
+                  display: inline-block !important;
+                }
+              }
+            }
+            &.profile {
+              a {
+                display: inline-block;
+                width: 40px;
+                img {
+                  width: 100%;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

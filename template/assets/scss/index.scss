@@ -1,0 +1,134 @@
+.login_screen {
+  display: grid;
+  grid-column: 1fr;
+  grid-row: 1fr;
+  align-content: center;
+  align-items: center;
+  div#container {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 550px;
+    margin: auto;
+    width: 100%;
+    section {
+      box-sizing: border-box;
+      &.slider {
+        background-image: url("../img/background.jpg");
+        background-size: cover;
+        background-position: center center;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        div {
+          box-sizing: border-box;
+          &:nth-child(1) {
+            padding: 30px;
+            img {
+              width: 100px;
+            }
+          }
+          &:nth-child(2) {
+            padding: 30px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 300;
+          }
+        }
+      }
+      &.form {
+        padding: 50px 60px;
+        h1 {
+          span {
+            font-size: 16px;
+            display: block;
+            font-weight: 400;
+            line-height: 150%;
+          }
+          font-size: 30px;
+          line-height: 130%;
+          font-weight: 200;
+          margin-bottom: 25px;
+        }
+        form {
+          fieldset {
+            &.error {
+              input[type="text"],
+              input[type="password"] {
+                border-color: $primary;
+              }
+              label {
+                color: $primary;
+              }
+            }
+            margin: 20px 0;
+            label {
+              font-size: 15px;
+              display: block;
+              font-weight: 400;
+              line-height: 150%;
+              margin-bottom: 5px;
+              box-sizing: border-box;
+            }
+            input[type="text"],
+            input[type="password"] {
+              display: block;
+              width: 100%;
+              font-size: 16px;
+              padding: 10px 12px;
+              box-sizing: border-box;
+              letter-spacing: 1px;
+              border: 1px solid #8d8b8b;
+              &::placeholder {
+                color: #757373;
+                font-size: 15px;
+                letter-spacing: 0;
+              }
+            }
+            div.inputCheckbox {
+              display: grid;
+              grid-template-columns: auto 1fr;
+              align-items: center;
+              box-sizing: border-box;
+            }
+            label.input_checkbox {
+              span {
+                box-sizing: border-box;
+                display: inline-block;
+                margin-left: 15px;
+                margin-top: 1px;
+                position: absolute;
+              }
+            }
+            button {
+              background-color: $primary;
+              border: 0px;
+              box-sizing: border-box;
+              display: inline-block;
+              color: #ffffff;
+              font-size: 16px;
+              font-weight: 300;
+              padding: 10px 20px;
+              border-radius: 3px;
+              letter-spacing: 1px;
+              margin: 20px 0;
+              transition: 0.5s ease;
+              cursor: pointer;
+              &:hover {
+                background-color: #000000;
+              }
+            }
+          }
+          p {
+            font-size: 13px;
+            font-weight: 400;
+            a {
+              color: $primary;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
